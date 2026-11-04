@@ -1,0 +1,109 @@
+{
+  "active_model_version": "1.0.0-ml-prod",
+  "selected_classifier": "MultinomialNaiveBayes",
+  "training_timestamp": "2026-08-24T18:25:16.811861+00:00",
+  "dataset_stats": {
+    "initial_samples": 287,
+    "deduplicated_samples": 287,
+    "train_samples": 231,
+    "test_samples": 56,
+    "benign_total": 144,
+    "malicious_total": 143,
+    "attack_categories": {
+      "benign": 144,
+      "prompt_injection": 27,
+      "jailbreak": 21,
+      "instruction_override": 10,
+      "system_prompt_extraction": 15,
+      "data_exfiltration": 15,
+      "sensitive_info_extraction": 10,
+      "obfuscated_attack": 15,
+      "malicious_tool_instruction": 10,
+      "indirect_prompt_injection": 10,
+      "suspicious_adversarial": 10
+    }
+  },
+  "selected_model_metrics": {
+    "accuracy": 0.9464,
+    "precision": 0.931,
+    "recall": 0.9643,
+    "f1_score": 0.9474,
+    "false_positive_rate": 0.0714,
+    "false_negative_rate": 0.0357,
+    "confusion_matrix": {
+      "true_positives": 27,
+      "true_negatives": 26,
+      "false_positives": 2,
+      "false_negatives": 1
+    },
+    "avg_inference_latency_ms": 0.007,
+    "training_time_ms": 2.29
+  },
+  "all_model_comparisons": {
+    "LogisticRegression": {
+      "accuracy": 0.9107,
+      "precision": 0.871,
+      "recall": 0.9643,
+      "f1_score": 0.9153,
+      "false_positive_rate": 0.1429,
+      "false_negative_rate": 0.0357,
+      "confusion_matrix": {
+        "true_positives": 27,
+        "true_negatives": 24,
+        "false_positives": 4,
+        "false_negatives": 1
+      },
+      "avg_inference_latency_ms": 0.004,
+      "training_time_ms": 74.95
+    },
+    "LinearSVM": {
+      "accuracy": 0.875,
+      "precision": 0.8621,
+      "recall": 0.8929,
+      "f1_score": 0.8772,
+      "false_positive_rate": 0.1429,
+      "false_negative_rate": 0.1071,
+      "confusion_matrix": {
+        "true_positives": 25,
+        "true_negatives": 24,
+        "false_positives": 4,
+        "false_negatives": 3
+      },
+      "avg_inference_latency_ms": 0.004,
+      "training_time_ms": 360.71
+    },
+    "MultinomialNaiveBayes": {
+      "accuracy": 0.9464,
+      "precision": 0.931,
+      "recall": 0.9643,
+      "f1_score": 0.9474,
+      "false_positive_rate": 0.0714,
+      "false_negative_rate": 0.0357,
+      "confusion_matrix": {
+        "true_positives": 27,
+        "true_negatives": 26,
+        "false_positives": 2,
+        "false_negatives": 1
+      },
+      "avg_inference_latency_ms": 0.007,
+      "training_time_ms": 2.29
+    },
+    "RandomForest": {
+      "accuracy": 0.875,
+      "precision": 0.8182,
+      "recall": 0.9643,
+      "f1_score": 0.8852,
+      "false_positive_rate": 0.2143,
+      "false_negative_rate": 0.0357,
+      "confusion_matrix": {
+        "true_positives": 27,
+        "true_negatives": 22,
+        "false_positives": 6,
+        "false_negatives": 1
+      },
+      "avg_inference_latency_ms": 0.421,
+      "training_time_ms": 58.42
+    }
+  },
+  "selection_rationale": "Selected 'MultinomialNaiveBayes' because it demonstrated superior balance of high security recall (96.4%), strong F1 score (94.7%), and fast inference latency (0.007ms)."
+}

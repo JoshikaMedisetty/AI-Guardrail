@@ -1,0 +1,109 @@
+{
+  "active_model_version": "1.0.0-ml-prod",
+  "selected_classifier": "LinearSVM",
+  "training_timestamp": "2026-09-21T14:02:02.212280+00:00",
+  "dataset_stats": {
+    "initial_samples": 287,
+    "deduplicated_samples": 287,
+    "train_samples": 231,
+    "test_samples": 56,
+    "benign_total": 144,
+    "malicious_total": 143,
+    "attack_categories": {
+      "benign": 144,
+      "prompt_injection": 27,
+      "jailbreak": 21,
+      "instruction_override": 10,
+      "system_prompt_extraction": 15,
+      "data_exfiltration": 15,
+      "sensitive_info_extraction": 10,
+      "obfuscated_attack": 15,
+      "malicious_tool_instruction": 10,
+      "indirect_prompt_injection": 10,
+      "suspicious_adversarial": 10
+    }
+  },
+  "selected_model_metrics": {
+    "accuracy": 0.9286,
+    "precision": 0.9286,
+    "recall": 0.9286,
+    "f1_score": 0.9286,
+    "false_positive_rate": 0.0714,
+    "false_negative_rate": 0.0714,
+    "confusion_matrix": {
+      "true_positives": 26,
+      "true_negatives": 26,
+      "false_positives": 2,
+      "false_negatives": 2
+    },
+    "avg_inference_latency_ms": 0.005,
+    "training_time_ms": 286.14
+  },
+  "all_model_comparisons": {
+    "LogisticRegression": {
+      "accuracy": 0.9464,
+      "precision": 0.963,
+      "recall": 0.9286,
+      "f1_score": 0.9455,
+      "false_positive_rate": 0.0357,
+      "false_negative_rate": 0.0714,
+      "confusion_matrix": {
+        "true_positives": 26,
+        "true_negatives": 27,
+        "false_positives": 1,
+        "false_negatives": 2
+      },
+      "avg_inference_latency_ms": 0.004,
+      "training_time_ms": 82.93
+    },
+    "LinearSVM": {
+      "accuracy": 0.9286,
+      "precision": 0.9286,
+      "recall": 0.9286,
+      "f1_score": 0.9286,
+      "false_positive_rate": 0.0714,
+      "false_negative_rate": 0.0714,
+      "confusion_matrix": {
+        "true_positives": 26,
+        "true_negatives": 26,
+        "false_positives": 2,
+        "false_negatives": 2
+      },
+      "avg_inference_latency_ms": 0.005,
+      "training_time_ms": 286.14
+    },
+    "MultinomialNaiveBayes": {
+      "accuracy": 0.9286,
+      "precision": 0.9286,
+      "recall": 0.9286,
+      "f1_score": 0.9286,
+      "false_positive_rate": 0.0714,
+      "false_negative_rate": 0.0714,
+      "confusion_matrix": {
+        "true_positives": 26,
+        "true_negatives": 26,
+        "false_positives": 2,
+        "false_negatives": 2
+      },
+      "avg_inference_latency_ms": 0.005,
+      "training_time_ms": 2.51
+    },
+    "RandomForest": {
+      "accuracy": 0.8036,
+      "precision": 0.7742,
+      "recall": 0.8571,
+      "f1_score": 0.8136,
+      "false_positive_rate": 0.25,
+      "false_negative_rate": 0.1429,
+      "confusion_matrix": {
+        "true_positives": 24,
+        "true_negatives": 21,
+        "false_positives": 7,
+        "false_negatives": 4
+      },
+      "avg_inference_latency_ms": 0.496,
+      "training_time_ms": 64.38
+    }
+  },
+  "selection_rationale": "Selected 'LinearSVM' because it demonstrated superior balance of high security recall (92.9%), strong F1 score (92.9%), and fast inference latency (0.005ms)."
+}
