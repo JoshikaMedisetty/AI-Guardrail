@@ -116,3 +116,27 @@
   .md h1, .md h2, .md h3 { font-weight: 700; margin: 0.6rem 0 0.3rem; }
   .md a { color: var(--cyan); text-decoration: underline; }
 }
+
+/* Light theme: applied when <html> has class "light" (toggled by ThemeToggle). */
+html.light {
+  --background: oklch(0.985 0.004 255);
+  --foreground: oklch(0.2 0.03 264);
+  --card: oklch(1 0 0 / 0.9);
+  --card-foreground: oklch(0.2 0.03 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.03 264);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.01 260);
+  --secondary-foreground: oklch(0.25 0.03 264);
+  --muted: oklch(0.95 0.01 260);
+  --muted-foreground: oklch(0.48 0.03 260);
+  --accent: oklch(0.93 0.02 270);
+  --accent-foreground: oklch(0.2 0.03 264);
+  --border: oklch(0.2 0.03 264 / 12%);
+  --input: oklch(0.2 0.03 264 / 15%);
+  --sidebar: oklch(0.97 0.006 255);
+  --sidebar-foreground: oklch(0.25 0.03 264);
+  --sidebar-accent-foreground: oklch(0.2 0.03 264);
+  --sidebar-border: oklch(0.2 0.03 264 / 10%);
+  --gradient-glow: radial-gradient(60% 50% at 50% 0%, oklch(0.585 0.204 277 / 12%), transparent 70%);
+}

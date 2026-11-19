@@ -14,6 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "@/hooks/use-auth";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeToggle, useThemeValue } from "@/components/ThemeToggle";
 
 function NotFoundComponent() {
   return (
@@ -129,8 +130,14 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <AuthProvider>
         <Outlet />
-        <Toaster theme="dark" richColors />
+        <ThemedToaster />
+        <ThemeToggle />
       </AuthProvider>
     </QueryClientProvider>
   );
+}
+
+function ThemedToaster() {
+  const theme = useThemeValue();
+  return <Toaster theme={theme} richColors />;
 }
