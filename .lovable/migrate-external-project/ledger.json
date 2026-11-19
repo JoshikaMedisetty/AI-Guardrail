@@ -1,0 +1,14 @@
+[
+ {"capability":"code: React SPA (landing, auth, agents, chat, dashboard, threats, history, analytics, settings, connect, profile)","source":"Website/frontend","outcome":"migrate","status":"in_progress","next_action":"Rebuild as TanStack routes"},
+ {"capability":"guardrail engine: 6 rule detectors, TF-IDF + Naive Bayes model, risk ensemble, decision engine, output guardrail","source":"Website/backend/app","outcome":"migrate","status":"in_progress","next_action":"Port to TypeScript server code with bundled model.json"},
+ {"capability":"schema","source":"SQLAlchemy models (SQLite)","outcome":"migrate","status":"in_progress","next_action":"Recreate in Lovable Cloud"},
+ {"capability":"records","source":"backend/guardrail.db (sanitized)","outcome":"migrate","status":"in_progress","next_action":"Import agents, conversations, messages, audit logs, alerts"},
+ {"capability":"auth identities","source":"users table (1 user, JWT+bcrypt)","outcome":"migrate","status":"in_progress","next_action":"Legacy user mapping, link on verified email"},
+ {"capability":"authorization (USER vs Security Administrator)","source":"deps.py","outcome":"migrate","status":"in_progress","next_action":"user_roles + RLS"},
+ {"capability":"AI provider (Ollama/OpenAI/Gemini/demo)","source":"ai_provider_service.py","outcome":"replace with Lovable AI (Ollama is local-only)","status":"in_progress","next_action":"Server function via AI Gateway"},
+ {"capability":"public endpoints: guardrail check / scan / browser-event via agent API key","source":"routes.py","outcome":"migrate","status":"in_progress","next_action":"/api/public/v1/* with hashed API keys"},
+ {"capability":"svm/ research scripts (Streamlit UI, Ollama, browser worker, evaluation)","source":"svm/","outcome":"out of web scope; local Python tooling","status":"accepted","next_action":"Browser worker can call the new public API"},
+ {"capability":"secrets","source":".env.example","outcome":"none needed (JWT secrets replaced by Cloud auth; AI via Lovable AI)","status":"verified","next_action":""},
+ {"capability":"cutover","source":"localhost:8000","outcome":"external SDK/clients must point to new /api/public/v1 URL","status":"pending","next_action":"Update ai_guardrail_sdk base URL after publish"},
+ {"capability":"verification","source":"","outcome":"","status":"pending","next_action":"Build, routes, chat flow, imported-user login"}
+]
