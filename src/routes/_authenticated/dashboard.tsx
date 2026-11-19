@@ -4,6 +4,7 @@ import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YA
 import { logsQuery, alertsQuery, agentsQuery } from "@/lib/guardrail/queries";
 import { MetricCard, PageHeader, StatusBadge, fmtDate, pct } from "@/components/guardrail/badges";
 import { LiveTester } from "@/components/guardrail/live-tester";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({ meta: [{ title: "Security Dashboard — Universal AI Guardrail" }, { name: "description", content: "Monitor AI agent traffic and neutralize threats in real time." }, { property: "og:title", content: "Security Dashboard — Universal AI Guardrail" }, { property: "og:description", content: "Monitor AI agent traffic and neutralize threats in real time." }] }),
@@ -29,7 +30,7 @@ function Dashboard() {
   }
   return (
     <div>
-      <PageHeader title="Executive Security Dashboard" subtitle="Central operations center for monitoring AI agent traffic and neutralizing threats in real time" />
+      <div className="flex items-start justify-between gap-4"><PageHeader title="Executive Security Dashboard" subtitle="Central operations center for monitoring AI agent traffic and neutralizing threats in real time" /><ThemeToggle /></div>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
         <MetricCard label="Inspected requests" value={logs.length} accent="cyan" />
         <MetricCard label="Threats blocked" value={blocked} accent="threat" />

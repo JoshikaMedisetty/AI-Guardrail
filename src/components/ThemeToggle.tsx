@@ -32,7 +32,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
       title={theme === "dark" ? "Light theme" : "Dark theme"}
-      className="fixed bottom-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-xl shadow-glow backdrop-blur transition hover:scale-110"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-card text-lg transition hover:scale-110"
     >
       {theme === "dark" ? "☀️" : "🌙"}
     </button>
@@ -48,4 +48,12 @@ export function useThemeValue(): Theme {
     return () => window.removeEventListener("themechange", h);
   }, []);
   return t;
+}
+
+/** Applies the saved theme on every page without showing a button. */
+export function ThemeInit() {
+  useEffect(() => {
+    applyTheme(localStorage.getItem("theme") === "light" ? "light" : "dark");
+  }, []);
+  return null;
 }

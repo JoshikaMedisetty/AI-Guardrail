@@ -14,7 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "@/hooks/use-auth";
 import { Toaster } from "@/components/ui/sonner";
-import { ThemeToggle, useThemeValue } from "@/components/ThemeToggle";
+import { ThemeInit, useThemeValue } from "@/components/ThemeToggle";
 
 function NotFoundComponent() {
   return (
@@ -131,7 +131,7 @@ function RootComponent() {
       <AuthProvider>
         <Outlet />
         <ThemedToaster />
-        <ThemeToggle />
+        <ThemeInit />
       </AuthProvider>
     </QueryClientProvider>
   );
