@@ -7,7 +7,7 @@ import { ArrowLeft, Plus, Send, ShieldCheck, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { agentsQuery, conversationsQuery, messagesQuery } from "@/lib/guardrail/queries";
-import { sendChatMessage } from "@/server/guardrail.functions";
+import { sendChatMessage } from "@/lib/guardrail.functions";
 import { StatusBadge, pct } from "@/components/guardrail/badges";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";

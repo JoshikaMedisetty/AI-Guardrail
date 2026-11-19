@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
-import { testGuardrail } from "@/server/guardrail.functions";
+import { testGuardrail } from "@/lib/guardrail.functions";
 import { agentsQuery } from "@/lib/guardrail/queries";
 import { StatusBadge, pct } from "./badges";
 import { Button } from "@/components/ui/button";

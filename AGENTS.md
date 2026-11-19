@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+<!-- AGENT-MEMORY:BEGIN -->
+- Guardrail engine lives in `src/lib/guardrail/engine.ts` as pure functions with the trained model in `model.json`; it is a faithful port of the original Python detectors, so keep behavior aligned and covered by `engine.test.ts`.
+- Server functions live in `src/lib/*.functions.ts`; server-only helpers in `src/server/*.server.ts` (the `server/` folder is blocked from client imports).
+- Telemetry is written as the calling user (RLS `user_id = auth.uid()`); only agent counters and the API-key endpoint use the admin client.
+- External agents call `/api/public/v1/guardrail/{check,scan,check-output}` with hashed `grd_live_` API keys.
+- Imported legacy accounts are linked by the `link_legacy_user` DB function on verified email; never link on unverified email.
+<!-- AGENT-MEMORY:END -->

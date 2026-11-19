@@ -7,7 +7,7 @@ import { Copy, KeyRound, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 import { agentsQuery, apiKeysQuery } from "@/lib/guardrail/queries";
-import { createApiKey } from "@/server/guardrail.functions";
+import { createApiKey } from "@/lib/guardrail.functions";
 import { PageHeader, StatusBadge, fmtDate } from "@/components/guardrail/badges";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
