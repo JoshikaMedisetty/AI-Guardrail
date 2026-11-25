@@ -1,0 +1,69 @@
+{
+  "experiment_timestamp": "2026-09-23 15:31:15 UTC",
+  "test_samples_evaluated": 56,
+  "comparative_experiments": {
+    "Experiment_1_RuleBased_Only": {
+      "accuracy": 0.6964,
+      "precision": 1.0,
+      "recall": 0.3929,
+      "f1_score": 0.5641,
+      "fpr": 0.0,
+      "fnr": 0.6071,
+      "latency_ms": 0.053
+    },
+    "Experiment_2_ML_Only": {
+      "accuracy": 0.9286,
+      "precision": 0.9286,
+      "recall": 0.9286,
+      "f1_score": 0.9286,
+      "fpr": 0.0714,
+      "fnr": 0.0714,
+      "latency_ms": 0.03
+    },
+    "Experiment_3_Ensemble_Guardrail": {
+      "accuracy": 0.9464,
+      "precision": 0.931,
+      "recall": 0.9643,
+      "f1_score": 0.9474,
+      "fpr": 0.0714,
+      "fnr": 0.0357,
+      "latency_ms": 0.084
+    }
+  },
+  "threshold_optimization": [
+    {
+      "config_name": "Strict Security (0.30 / 0.60)",
+      "thresholds": "Low: 0.3, High: 0.6",
+      "accuracy": 0.9464,
+      "precision": 0.931,
+      "recall": 0.9643,
+      "f1_score": 0.9474,
+      "fpr": 0.0714,
+      "fnr": 0.0357,
+      "latency_ms": 0.084
+    },
+    {
+      "config_name": "Balanced Default (0.40 / 0.70)",
+      "thresholds": "Low: 0.4, High: 0.7",
+      "accuracy": 0.9464,
+      "precision": 0.931,
+      "recall": 0.9643,
+      "f1_score": 0.9474,
+      "fpr": 0.0714,
+      "fnr": 0.0357,
+      "latency_ms": 0.084
+    },
+    {
+      "config_name": "Permissive (0.50 / 0.75)",
+      "thresholds": "Low: 0.5, High: 0.75",
+      "accuracy": 0.9464,
+      "precision": 0.931,
+      "recall": 0.9643,
+      "f1_score": 0.9474,
+      "fpr": 0.0714,
+      "fnr": 0.0357,
+      "latency_ms": 0.084
+    }
+  ],
+  "conclusion": "The Ensemble Guardrail (Rule + ML + Risk Engine) achieves the highest F1-score and security recall while maintaining sub-millisecond inference latency."
+}
