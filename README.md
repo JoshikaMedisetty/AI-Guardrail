@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Universal AI Guardrail
 
 ## Project Overview
@@ -163,3 +164,6 @@ AI agents by identifying malicious instructions and unsafe retrieved
 content. It supports safer agent interactions through content
 inspection, configurable enforcement, audit records, security alerts,
 and monitoring dashboards.
+=======
+# AI-Guardrail
+>>>>>>> b0496e10c318e8f7103ab4debf1425b44b1c7cbb
